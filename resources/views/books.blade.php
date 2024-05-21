@@ -3,8 +3,15 @@
 @section('title', 'Home')
 
 @section('content')
-<main>
-    <h1>qui ci vanno i libri</h1>
+<main class="container">
+    <h1>Books</h1>
+    <ul>
+        @foreach ($books as $book)
+            <li>
+                <a>{{ $book->title }}</a>
+            </li>
+        @endforeach
+    </ul>
 </main>
 
 @endsection

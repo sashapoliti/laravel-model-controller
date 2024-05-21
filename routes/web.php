@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\BookController as BookController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,5 +13,9 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-use App\Http\Controllers\BookController as BookController;
+
+Route::get('/', function () {
+    return view('home');
+});
+
 Route::get('/books', [BookController::class, 'index']);
